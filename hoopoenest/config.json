@@ -1,0 +1,28 @@
+{
+	"apiPort": 2000,
+	"endNodePort": 4000,
+	"dbURL": "mongodb+srv://dev:clojureisbest@hoopoenest.hreez.mongodb.net/sat?retryWrites=true&w=majority",
+	"satellites": [
+		{
+			"name": "sat1",
+			"callsign": "TAUSAT",
+			"SSID": 1,
+			"satId": 1,
+			"commProtocols": ["stubsSpl"],
+			"format": {
+				"parser": "MIB",
+				"file": "tests/MIB-HPN.json"
+			}
+		},
+		{
+			"name": "sat2",
+			"callsign": "qwertyuiopdcsdc",
+			"SSID": 13345,
+			"commProtocols": ["spl"],
+			"format": {
+				"parser": "MIB",
+				"file": "tests/entities/formatParsers/MIB/MIBmock.json"
+			}
+		}
+	]
+}

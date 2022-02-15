@@ -1,0 +1,36 @@
+# image: electronuserland/builder:wine
+image: ubuntu
+
+pipelines:
+    branches:
+        master:
+            - step:
+                  name: "Build and Upload"
+                  services:
+                  #   caches:
+                  #       - node
+                  script:
+                      #   - apt-get update
+                      #   - apt-get install wine zip -y
+
+                      #   - dpkg --add-architecture i386
+                      #   - apt-get update
+                      #   - apt-get install wine32 -y
+
+                      #   - npm i
+                      #   - npm run release
+
+                      #   - zip WORMS.zip dist/*.exe dist/*.AppImage
+
+                      #   - wget -O dbx https://github.com/dropbox/dbxcli/releases/download/v3.0.0/dbxcli-linux-amd64
+                      #   - chmod +x ./dbx
+                      #   - mkdir -p ~/.config/dbxcli/
+                      #   - cp dbxcli-auth.json ~/.config/dbxcli/auth.json
+                      #   - ./dbx put WORMS.zip HoopoeNest/WORMS.zip
+                      #   - "docker run -i --name build \
+                      #     --env-file <(env | grep -iE 'DEBUG|NODE_|ELECTRON_|YARN_|NPM_|CI|CIRCLE|TRAVIS_TAG|TRAVIS|TRAVIS_REPO_|TRAVIS_BUILD_|TRAVIS_BRANCH|TRAVIS_PULL_REQUEST_|APPVEYOR_|CSC_|GH_|GITHUB_|BT_|AWS_|STRIP|BUILD_') \
+                      #     -v ${BITBUCKET_CLONE_DIR}:/project \
+                      #     electronuserland/builder:wine-mono
+                      #     < ./pipeline.sh"
+                      #   - docker exec -d build npm i
+                      #   - docker exec -d build npm run release

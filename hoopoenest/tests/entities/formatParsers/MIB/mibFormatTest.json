@@ -1,0 +1,157 @@
+{
+	"telemetry": {
+		"serviceTypes": [
+			{
+				"id": 1,
+				"name": "st1",
+				"serviceSubTypes": [
+					{
+						"id": 1,
+						"name": "sst1",
+						"params": [{ "name": "param1", "type": "byte" }]
+					},
+					{
+						"id": 2,
+						"name": "sst2",
+						"params": [
+							{
+								"name": "param1",
+								"type": "byte",
+								"calibration": "cal2"
+							}
+						]
+					},
+					{
+						"id": 3,
+						"name": "sst3",
+						"params": [
+							{
+								"name": "param1",
+								"type": "byte",
+								"calibration": "cal1",
+								"range": {
+									"min": 200
+								}
+							}
+						]
+					},
+					{
+						"id": 4,
+						"name": "sst4",
+						"params": [
+							{
+								"name": "param1",
+								"type": "bitmap",
+								"bitfields": [
+									{
+										"size": 1,
+										"isNull": false,
+										"name": "field1",
+										"calibration": "cal2"
+									},
+									{
+										"size": 1,
+										"isNull": false,
+										"name": "field2",
+										"calibration": "cal1"
+									},
+									{
+										"size": 1,
+										"isNull": true,
+										"name": "field3"
+									},
+									{
+										"size": 5,
+										"isNull": false,
+										"name": "field4"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 5,
+						"name": "sst5",
+						"params": [
+							{
+								"name": "param1",
+								"type": "datetime",
+								"range": {
+									"min": "01/01/2000 01:01:01"
+								}
+							},
+							{
+								"name": "param2",
+								"type": "byte",
+								"range": {
+									"min": 3,
+									"max": 9
+								}
+							}
+						]
+					},
+					{
+						"id": 6,
+						"name": "sst6",
+						"description": "a test packet",
+						"params": [
+							{
+								"name": "param1",
+								"type": "byte",
+								"description": "I'm Alon Grossman and I have scribbled on the HoopoeNest codebase",
+								"unit": "Nikita Viles"
+							}
+						]
+					},
+					{
+						"id": 7,
+						"name": "sst7",
+						"params": [
+							{
+								"name": "param1",
+								"type": "byte",
+								"subSystem": "ADCS"
+							}
+						]
+					},
+					{
+						"id": 8,
+						"name": "sst8",
+						"params": [
+							{
+								"name": "param1",
+								"type": "buffer",
+								"size": 3
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"telecommands": {
+		"serviceTypes": []
+	},
+	"calibrations": [
+		{
+			"name": "cal1",
+			"type": "linear",
+			"m": 4,
+			"b": 1
+		},
+		{
+			"name": "cal2",
+			"type": "enum",
+			"options": [
+				{
+					"name": "yes",
+					"value": 1
+				},
+				{
+					"name": "no",
+					"value": 0
+				}
+			]
+		}
+	]
+}

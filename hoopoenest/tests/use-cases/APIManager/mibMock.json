@@ -1,0 +1,55 @@
+{
+	"telemetry": {
+		"serviceTypes": [
+			{
+				"id": 1,
+				"name": "st1",
+				"serviceSubTypes": [
+					{
+						"id": 1,
+						"name": "sst1",
+						"params": [{ "name": "param1", "type": "byte" }]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "st2",
+				"serviceSubTypes": [
+					{
+						"id": 2,
+						"name": "sst2",
+						"params": []
+					}
+				]
+			}
+		]
+	},
+	"telecommands": {
+		"serviceTypes": [
+			{
+				"id": 1,
+				"name": "st1",
+				"serviceSubTypes": [
+					{
+						"id": 1,
+						"name": "sst1",
+						"params": [{ "name": "param1", "type": "byte" }]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "st2",
+				"serviceSubTypes": [
+					{
+						"id": 2,
+						"name": "sst2",
+						"params": []
+					}
+				]
+			}
+		]
+	},
+	"calibrations": []
+}

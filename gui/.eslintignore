@@ -1,0 +1,8 @@
+node_modules
+dist
+public
+rollup.config.js
+coverage
+jest.config.js
+server.js
+update-version.js

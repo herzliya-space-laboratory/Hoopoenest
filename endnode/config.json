@@ -1,0 +1,11 @@
+{
+	"name": "dev-en",
+	"serverURL": "http://localhost:3000",
+	"commProtocols": ["kiss", "ax25"],
+	"callsign": "abcdef",
+	"ssid": 0,
+	"groundArrays": {
+		"uplink": { "port": 4000, "address": "127.0.0.1" },
+		"downlink": { "port": 4001, "address": "127.0.0.1" }
+	}
+}

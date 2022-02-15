@@ -1,0 +1,96 @@
+[
+	{
+		"name": "juan",
+		"groundTime": "dayjs()",
+		"key": { "serviceType": 1, "serviceSubType": 2 },
+		"params": [
+			{
+				"name": "hihih",
+				"value": 1
+			}
+		],
+		"acks": [
+			{
+				"groundTime": "dayjs()",
+				"params": [
+					{
+						"name": "dscdc",
+						"value": 1
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "juan",
+		"groundTime": "dayjs()",
+		"key": { "serviceType": 1, "serviceSubType": 2 },
+		"params": [
+			{
+				"name": "juan",
+				"groundTime": "dayjs()",
+				"key": { "serviceType": 1, "serviceSubType": 2 },
+				"params": [
+					{
+						"name": "hihih",
+						"value": 1
+					}
+				]
+			},
+			{
+				"name": "juan",
+				"groundTime": "dayjs()",
+				"key": { "serviceType": 1, "serviceSubType": 2 },
+				"params": [
+					{
+						"name": "hihih",
+						"value": 1
+					}
+				]
+			},
+			{
+				"name": "juan",
+				"groundTime": "dayjs()",
+				"key": { "serviceType": 1, "serviceSubType": 2 },
+				"params": [
+					{
+						"name": "hihih",
+						"value": 1
+					}
+				]
+			},
+			{
+				"name": "hihih",
+				"type": "bitmap",
+				"value": [
+					{
+						"name": "field1",
+						"value": 1,
+						"type": "int"
+					},
+					{
+						"name": "field2",
+						"value": 5,
+						"type": "int"
+					}
+				]
+			},
+			{
+				"name": "hihih",
+				"type": "bitmap",
+				"value": [
+					{
+						"name": "field1",
+						"value": 1,
+						"type": "int"
+					},
+					{
+						"name": "field2",
+						"value": 5,
+						"type": "int"
+					}
+				]
+			}
+		]
+	}
+]

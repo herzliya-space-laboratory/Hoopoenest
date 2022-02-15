@@ -1,0 +1,23 @@
+[
+	{
+		"name": "sat1",
+		"callsign": "TAUSAT",
+		"SSID": 1,
+		"satId": 1,
+		"commProtocols": ["stubsSpl"],
+		"format": {
+			"parser": "MIB",
+			"file": "tests/entities/formatParsers/MIB/MIBmock.json"
+		}
+	},
+	{
+		"name": "sat2",
+		"callsign": "qwertyuiopdcsdc",
+		"SSID": 13345,
+		"commProtocols": ["spl"],
+		"format": {
+			"parser": "MIB",
+			"file": "tests/entities/formatParsers/MIB/MIBmock.json"
+		}
+	}
+]

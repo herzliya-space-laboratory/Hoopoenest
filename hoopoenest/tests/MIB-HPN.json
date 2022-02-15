@@ -1,0 +1,1856 @@
+{
+	"settings": { "isDefaultLittleEndian": false },
+	"telemetry": {
+		"serviceTypes": [
+			{
+				"id": 0,
+				"name": "TRXVU",
+				"serviceSubTypes": [
+					{
+						"id": 1,
+						"name": "Beacon",
+						"params": [
+							{
+								"name": "vbat",
+								"isLittleEndian": true,
+								"type": "int16",
+								"unit": "mV",
+								"description": "battery voltage",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "volt_5v",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "5v bus voltage",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "volt_3v3",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "3v3 bus voltage",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "charging_power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "the current charging power",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "consumed_power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "the satellite consumed power",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "electric_current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "the battery's up-to-date electric current",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "current_3v3",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "3.3 volt bus up-to-date battery",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "current_5v",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "5 volt bus up-to-date battery",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "MCU Temperature",
+								"isLittleEndian": true,
+								"type": "int16",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "Battery Temperature",
+								"isLittleEndian": true,
+								"type": "int16",
+								"subSystem": "EPS"
+							},
+							{
+								"name": "Solar panel 1 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "Solar panel"
+							},
+							{
+								"name": "Solar panel 2 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "Solar panel"
+							},
+							{
+								"name": "Solar panel 3 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "Solar panel"
+							},
+							{
+								"name": "Solar panel 4 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "Solar panel"
+							},
+							{
+								"name": "Solar panel 5 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "Solar panel"
+							},
+							{
+								"name": "Solar panel 6 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "Solar panel"
+							},
+							{
+								"name": "sat_time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "satellite's clock current unix time",
+								"subSystem": "OBC"
+							},
+							{
+								"name": "free_memory",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "the satellite's Sd's free bytes",
+								"subSystem": "SD"
+							},
+							{
+								"name": "corrupt_bytes",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "the memory's corrupted bytes",
+								"subSystem": "SD"
+							},
+							{
+								"name": "number_of_resets",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of resets the satellite has gone through",
+								"subSystem": "OBC"
+							},
+							{
+								"name": "sat_uptime",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "satellite's up time in seconds",
+								"subSystem": "OBC"
+							},
+							{
+								"name": "ADC channel 0 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "ADC"
+							},
+							{
+								"name": "ADC channel 1 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "ADC"
+							},
+							{
+								"name": "ADC channel 2 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "ADC"
+							},
+							{
+								"name": "ADC channel 3 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "ADC"
+							},
+							{
+								"name": "ADC channel 4 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"subSystem": "ADC"
+							},
+							{
+								"name": "number_of_cmd_resets",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of resets the satellite has gone through",
+								"subSystem": "OBC"
+							}
+						]
+					},
+					{
+						"id": 19,
+						"name": "get baud rate",
+						"params": [
+							{
+								"name": "bitrate",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "the bitrate we want to get (1200 - 00 | 2400 - 01 | 4800 - 02 | 9600 - 03)"
+							}
+						]
+					},
+					{
+						"id": 35,
+						"name": "get beacon interval",
+						"params": [
+							{
+								"name": "seconds",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of seconds for beacon interval "
+							}
+						]
+					},
+					{
+						"id": 36,
+						"name": "Set beacon interval",
+						"params": [
+							{
+								"name": "seconds",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of seconds for beacon interval "
+							}
+						]
+					},
+					{
+						"id": 102,
+						"name": "Get TX uptime",
+						"params": [
+							{
+								"name": "uptime",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "how much time the satellite is on"
+							}
+						]
+					},
+					{
+						"id": 104,
+						"name": "Get RX uptime",
+						"params": [
+							{
+								"name": "uptime",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "how much time the satellite is on"
+							}
+						]
+					},
+					{
+						"id": 167,
+						"name": "Get num of online commands",
+						"params": [
+							{
+								"name": "num of online cmd",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "how much online cmds the satellite needs to do"
+							}
+						]
+					},
+					{
+						"id": 178,
+						"name": "ANT get arm status",
+						"params": [
+							{
+								"name": "status",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "what is the status (disarm = 172 | arm = 173)"
+							}
+						]
+					},
+					{
+						"id": 179,
+						"name": "ANT get UPTIME",
+						"params": [
+							{
+								"name": "uptime",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "how much time the antenna is on"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 1,
+				"name": "EPS",
+				"serviceSubTypes": [
+					{
+						"id": 1,
+						"name": "Update Alpha",
+						"params": [
+							{
+								"name": "Alpha",
+								"isLittleEndian": true,
+								"type": "float",
+								"description": "new Alpha value (float value)"
+							}
+						]
+					},
+					{
+						"id": 2,
+						"name": "Get heater values",
+						"params": [
+							{
+								"name": "Min 1",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "[0.01 degC] Battery heater low temperature threshold"
+							},
+							{
+								"name": "Max 1",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "[0.01 degC] Battery heater max temperature threshold"
+							},
+							{
+								"name": "Min 2",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "[0.01 degC] Battery heater low temperature threshold"
+							},
+							{
+								"name": "Max 2",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "[0.01 degC] Battery heater max temperature threshold"
+							},
+							{
+								"name": "Min 3",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "[0.01 degC] Battery heater low temperature threshold"
+							},
+							{
+								"name": "Max 3",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "[0.01 degC] Battery heater max temperature threshold"
+							}
+						]
+					},
+					{ "id": 3, "name": "Set heater values", "params": [] },
+					{ "id": 4, "name": "Rest EPS WDT", "params": [] }
+				]
+			},
+			{
+				"id": 2,
+				"name": "Telemetry",
+				"serviceSubTypes": [
+					{
+						"id": 187,
+						"name": "Get Last FS Error",
+						"params": [
+							{
+								"name": "Last Error",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							}
+						]
+					},
+					{
+						"id": 205,
+						"name": "Get TLM period times",
+						"params": [
+							{
+								"name": "EPS interval",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "TRXVU interval",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Ant interval",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar Panel interval",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "WOD Panel interval",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 4,
+				"name": "Managment",
+				"serviceSubTypes": [
+					{
+						"id": 221,
+						"name": "Update Sat time",
+						"params": [
+							{
+								"name": "Current time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "Current time after command exec"
+							}
+						]
+					},
+					{
+						"id": 224,
+						"name": "FRAM Wtite",
+						"params": [
+							{
+								"name": "Byte data",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "data to read"
+							}
+						]
+					},
+					{
+						"id": 225,
+						"name": "FRAM Read",
+						"params": [
+							{
+								"name": "Byte data",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "data to read"
+							}
+						]
+					},
+					{
+						"id": 227,
+						"name": "Get Sat Uptime",
+						"params": [
+							{
+								"name": "Uptime",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"name": "ACK",
+				"serviceSubTypes": [
+					{ "id": 0, "name": "ACK_RECEIVE_COMM", "params": [] },
+					{ "id": 1, "name": "ACK_COMD_EXEC", "params": [] },
+					{ "id": 18, "name": "ACK_UPDATE_TIME", "params": [] },
+					{
+						"id": 19,
+						"name": "ACK_UPDATE_BEACON_BIT_RATE",
+						"params": []
+					},
+					{
+						"id": 20,
+						"name": "ACK_UPDATE_BEACON_TIME_DELAY",
+						"params": []
+					},
+					{
+						"id": 21,
+						"name": "ACK_UPDATE_EPS_VOLTAGES",
+						"params": []
+					},
+					{
+						"id": 22,
+						"name": "ACK_UPDATE_EPS_HEATER_VALUES",
+						"params": []
+					},
+					{ "id": 23, "name": "ACK_UPDATE_EPS_ALPHA", "params": [] },
+					{ "id": 112, "name": "ACK_FS_RESET", "params": [] },
+					{ "id": 113, "name": "ACK_TRXVU_SOFT_RESET", "params": [] },
+					{ "id": 114, "name": "ACK_TRXVU_HARD_RESET", "params": [] },
+					{ "id": 115, "name": "ACK_ANTS_RESET", "params": [] },
+					{ "id": 127, "name": "ACK_RESET_WAKEUP", "params": [] },
+					{ "id": 128, "name": "ACK_EPS_RESET", "params": [] },
+					{ "id": 129, "name": "ACK_SOFT_RESET", "params": [] },
+					{ "id": 130, "name": "ACK_HARD_RESET", "params": [] },
+					{ "id": 131, "name": "ACK_MEMORY_DELETE", "params": [] },
+					{ "id": 141, "name": "ACK_MUTE", "params": [] },
+					{ "id": 142, "name": "ACK_UNMUTE", "params": [] },
+					{
+						"id": 143,
+						"name": "ACK_ALLOW_TRANSPONDER",
+						"params": []
+					},
+					{ "id": 144, "name": "ACK_DUMP_START", "params": [] },
+					{ "id": 145, "name": "ACK_DUMP_ABORT", "params": [] },
+					{
+						"id": 146,
+						"name": "ACK_DUMP_FINISHED",
+						"params": [
+							{
+								"name": "number of elements",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "the number of dump elements that were sent over RF"
+							}
+						]
+					},
+					{ "id": 147, "name": "ACK_GENERIC_I2C_CMD", "params": [] },
+					{ "id": 148, "name": "ACK_ARM_DISARM", "params": [] },
+					{ "id": 149, "name": "ACK_REDEPLOY", "params": [] },
+					{
+						"id": 158,
+						"name": "ACK_RESET_DELAYED_CMD",
+						"params": []
+					},
+					{ "id": 160, "name": "ACK_FRAM_RESET", "params": [] },
+					{ "id": 170, "name": "ACK_PING", "params": [] },
+					{ "id": 187, "name": "ACK_UNKNOWN_SUBTYPE", "params": [] },
+					{
+						"id": 192,
+						"name": "ACK_DELETE_TLM",
+						"params": [
+							{
+								"name": "deleted files",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "how many TLM files were actually deleted from SD"
+							}
+						]
+					},
+					{
+						"id": 255,
+						"name": "ACK_ERROR_MSG",
+						"params": [
+							{
+								"name": "error number",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "TODO"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"name": "DUMP",
+				"serviceSubTypes": [
+					{
+						"id": 0,
+						"name": "tlm_eps",
+						"params": [
+							{
+								"name": "timestamp",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "TODO"
+							},
+							{
+								"name": "reply_header-stid",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "TODO"
+							},
+							{
+								"name": "reply_header-ivid",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "TODO"
+							},
+							{
+								"name": "reply_header-rc",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "TODO"
+							},
+							{
+								"name": "reply_header-bid",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "TODO"
+							},
+							{
+								"name": "reply_header-cmderr+stat",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "TODO"
+							},
+							{
+								"name": "reserved",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "reserved"
+							},
+							{
+								"name": "volt_brdsup",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "volt_brdsup"
+							},
+							{
+								"name": "temp",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "temp"
+							},
+							{
+								"name": "dist_input-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "volt_brdsup"
+							},
+							{
+								"name": "dist_input-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "temp"
+							},
+							{
+								"name": "dist_input-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "volt_brdsup"
+							},
+							{
+								"name": "batt_input-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "temp"
+							},
+							{
+								"name": "batt_input-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "volt_brdsup"
+							},
+							{
+								"name": "batt_input-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "temp"
+							},
+							{
+								"name": "stat_obc_on",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Bitflag field indicating channel-on status for the output bus channels"
+							},
+							{
+								"name": "stat_obc_ocf",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Bitflag field indicating overcurrent latch-off fault status for the output bus channels"
+							},
+							{
+								"name": "bat_stat",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": " Bitflag field indicating BP board"
+							},
+							{
+								"name": "temp2",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": " 2 and 4 cell battery pack: Battery pack temperature in between the center battery cells"
+							},
+							{
+								"name": "temp3",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "2 cell battery pack: not used 4 cell battery pack: Battery pack temperature on the front of the battery pack"
+							},
+							{
+								"name": "volt_vd0",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Voltage of voltage domain 0 in raw form"
+							},
+							{
+								"name": "volt_vd1",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Voltage of voltage domain 1 in raw form"
+							},
+							{
+								"name": "volt_vd2",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Voltage of voltage domain 2 in raw form"
+							},
+							{
+								"name": "vip_obc00-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc00-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc00-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc01-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc01-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc01-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc02-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc02-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc02-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc03-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc03-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc03-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc04-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc04-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc04-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc05-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc05-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc05-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc06-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc06-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc06-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc07-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc07-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc07-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc08-volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc08-current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "vip_obc08-power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Output V, I and P of output bus channel in raw form"
+							},
+							{
+								"name": "cc1-volt_in_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc1-curr_in_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc1-volt_out_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc1-curr_out_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc2-volt_in_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc2-curr_in_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc2-volt_out_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc2-curr_out_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc3-volt_in_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc3-curr_in_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							},
+							{
+								"name": "cc3-volt_out_mppt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "Data on conditioning chain in raw form"
+							}
+						]
+					},
+					{
+						"id": 1,
+						"name": "TX",
+						"params": [
+							{
+								"name": "timestamp",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "timestamp"
+							},
+							{
+								"name": "tx_reflpwr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "tx_fwrdpwr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "bus_volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "vutotal_curr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "vutx_curr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "vurx_curr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "vupa_curr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "pa_temp",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "board_temp",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							}
+						]
+					},
+					{
+						"id": 2,
+						"name": "ANT",
+						"params": [
+							{
+								"name": "timestamp",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "timestamp"
+							},
+							{
+								"name": "ants_temperature",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "ants_temperature"
+							},
+							{
+								"name": "ants_deployment",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "ants_deployment"
+							},
+							{
+								"name": "ants_uptime",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "ants_uptime"
+							}
+						]
+					},
+					{
+						"id": 3,
+						"name": "Solar Panels",
+						"params": [
+							{
+								"name": "timestamp",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "timestamp"
+							},
+							{
+								"name": "Solar panel 1 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 2 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 3 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 4 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 5 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 6 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							}
+						]
+					},
+					{
+						"id": 4,
+						"name": "WOD",
+						"params": [
+							{
+								"name": "timestamp",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "timestamp"
+							},
+							{
+								"name": "vbat",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "volt_5v",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "5v bus voltage"
+							},
+							{
+								"name": "volt_3v3",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "3v3 bus voltage"
+							},
+							{
+								"name": "charging_power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "the current charging power"
+							},
+							{
+								"name": "consumed_power",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "the satellite consumed power"
+							},
+							{
+								"name": "electric_current",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "the battery's up-to-date electric current"
+							},
+							{
+								"name": "current_3v3",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "3.3 volt bus up-to-date battery"
+							},
+							{
+								"name": "current_5v",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "5 volt bus up-to-date battery"
+							},
+							{
+								"name": "MCU Temperature",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": ""
+							},
+							{
+								"name": "Battery Temperature",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 1 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 2 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 3 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 4 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 5 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "Solar panel 6 Temperature",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": ""
+							},
+							{
+								"name": "sat_time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "satellite's clock current unix time"
+							},
+							{
+								"name": "free_memory",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "the satellite's Sd's free bytes"
+							},
+							{
+								"name": "corrupt_bytes",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "the memory's corrupted bytes"
+							},
+							{
+								"name": "number_of_resets",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of resets the satellite has gone through"
+							},
+							{
+								"name": "sat_uptime",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "satellite's up time in seconds"
+							},
+							{
+								"name": "ADC channel 0 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "na"
+							},
+							{
+								"name": "ADC channel 1 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "na"
+							},
+							{
+								"name": "ADC channel 2 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "na"
+							},
+							{
+								"name": "ADC channel 3 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "na"
+							},
+							{
+								"name": "ADC channel 4 (mV)",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "na"
+							},
+							{
+								"name": "number_of_cmd_resets",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of resets the satellite has gone through"
+							}
+						]
+					},
+					{
+						"id": 6,
+						"name": "RX",
+						"params": [
+							{
+								"name": "timestamp",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "timestamp"
+							},
+							{
+								"name": "rx_doppler",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "rx_rssi",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "bus_volt",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "vutotal_curr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "vutx_curr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "vurx_curr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "vupa_curr",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "pa_temp",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							},
+							{
+								"name": "board_temp",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "battery voltage"
+							}
+						]
+					},
+					{
+						"id": 13,
+						"name": "LOG",
+						"params": [
+							{
+								"name": "timestamp",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "timestamp"
+							},
+							{
+								"name": "error number",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "error number"
+							},
+							{
+								"name": "message",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "message"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"telecommands": {
+		"serviceTypes": [
+			{
+				"id": 0,
+				"name": "TRXVU",
+				"serviceSubTypes": [
+					{
+						"id": 17,
+						"name": "Mute",
+						"params": [
+							{
+								"name": "duration",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of seconds to mute the TRXVU"
+							}
+						]
+					},
+					{ "id": 19, "name": "Get baud rate", "params": [] },
+					{
+						"id": 21,
+						"name": "Set baud rate",
+						"params": [
+							{
+								"name": "bitrate",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "the bitrate we want to set in the trxvu (1200 - 00 | 2400 - 01 | 4800 - 02 | 9600 - 03)",
+								"calibration": "cal2"
+							}
+						]
+					},
+					{ "id": 34, "name": "Abort dump", "params": [] },
+					{ "id": 35, "name": "Get beacon interval", "params": [] },
+					{
+						"id": 36,
+						"name": "Set beacon interval",
+						"params": [
+							{
+								"name": "seconds",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of seconds for beacon interval "
+							}
+						]
+					},
+					{ "id": 37, "name": "Transmit beacon", "params": [] },
+					{ "id": 102, "name": "Get TX uptime", "params": [] },
+					{ "id": 104, "name": "Get RX uptime", "params": [] },
+					{
+						"id": 105,
+						"name": "Dump by days",
+						"params": [
+							{
+								"name": "dump_type",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "the type of the dump ",
+								"calibration": "cal10"
+							},
+							{
+								"name": "start time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "start date of dump "
+							},
+							{
+								"name": "end time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "end date of dump - not including this date"
+							},
+							{
+								"name": "resulotion",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "dump steps in seconds "
+							}
+						]
+					},
+					{
+						"id": 112,
+						"name": "Dump with time range",
+						"params": [
+							{
+								"name": "dump_type",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "the type of the dump ",
+								"calibration": "cal9"
+							},
+							{
+								"name": "start time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "start time of dump "
+							},
+							{
+								"name": "end time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "end time of dump - not including this date "
+							},
+							{
+								"name": "resulotion",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "dump steps in seconds "
+							}
+						]
+					},
+					{
+						"id": 135,
+						"name": "Set idel state",
+						"params": [
+							{
+								"name": "state",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "00 (off) / 01 (on)",
+								"calibration": "cal8"
+							},
+							{
+								"name": "duration",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "idle duration time (max 10 minutes) apply only for state ON"
+							}
+						]
+					},
+					{ "id": 136, "name": "Unmute", "params": [] },
+					{
+						"id": 165,
+						"name": "Set Transponder RSSI",
+						"params": [
+							{
+								"name": "RSSI",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "RSSI value (0-4095)"
+							}
+						]
+					},
+					{
+						"id": 166,
+						"name": "Set Transponder",
+						"params": [
+							{
+								"name": "mode",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "Transponder mode",
+								"calibration": "cal1"
+							},
+							{
+								"name": "duration",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of seconds to run the transponder (valid only when mdoe is transponder)"
+							}
+						]
+					},
+					{
+						"id": 167,
+						"name": "Get num of online commands",
+						"params": []
+					},
+					{
+						"id": 176,
+						"name": "ANT set arm status",
+						"params": [
+							{
+								"name": "ant side",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "what side we want to change the status (side A - 00 | side B - 01) ",
+								"calibration": "cal4"
+							},
+							{
+								"name": "status",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "what status we want the antenna side to be (disarm = 172 | arm = 173) ",
+								"calibration": "cal5"
+							}
+						]
+					},
+					{
+						"id": 178,
+						"name": "ANT get arm status",
+						"params": [
+							{
+								"name": "ant side",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "what side we want to know the status (side A - 00 | side B - 01) ",
+								"calibration": "cal3"
+							}
+						]
+					},
+					{
+						"id": 179,
+						"name": "ANT get UPTIME",
+						"params": [
+							{
+								"name": "ant side",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "what side we want to know the UPTIME (side A - 00 | side B - 01) ",
+								"calibration": "cal6"
+							}
+						]
+					},
+					{
+						"id": 183,
+						"name": "ANT cancel deploy",
+						"params": [
+							{
+								"name": "ant side",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "what side we want to cancel the deployment (side A - 00 | side B - 01) ",
+								"calibration": "cal7"
+							}
+						]
+					},
+					{ "id": 192, "name": "Ant Stop Redeploy", "params": [] },
+					{ "id": 194, "name": "Ping", "params": [] }
+				]
+			},
+			{
+				"id": 1,
+				"name": "EPS",
+				"serviceSubTypes": [
+					{
+						"id": 1,
+						"name": "Update Alpha",
+						"params": [
+							{
+								"name": "Alpha",
+								"isLittleEndian": true,
+								"type": "float",
+								"description": "new Alpha value (float value)"
+							}
+						]
+					},
+					{ "id": 2, "name": "Get heater values", "params": [] },
+					{
+						"id": 3,
+						"name": "Set heater values",
+						"params": [
+							{
+								"name": "Min",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "[0.01 degC] Battery heater low temperature threshold"
+							},
+							{
+								"name": "Max",
+								"isLittleEndian": true,
+								"type": "int16",
+								"description": "[0.01 degC] Battery heater max temperature threshold"
+							}
+						]
+					},
+					{ "id": 4, "name": "Rest EPS WDT", "params": [] }
+				]
+			},
+			{
+				"id": 2,
+				"name": "Telemetry",
+				"serviceSubTypes": [
+					{
+						"id": 170,
+						"name": "Delete TLM Files",
+						"params": [
+							{
+								"name": "tlm_type",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "the type of the telematry to delete ",
+								"calibration": "cal11"
+							},
+							{
+								"name": "start time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "start date of dump "
+							},
+							{
+								"name": "end time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "end date of dump - not including this date"
+							}
+						]
+					},
+					{
+						"id": 171,
+						"name": "Delete all files on SD, excluding about.jpg",
+						"params": []
+					},
+					{ "id": 187, "name": "Get Last FS Error", "params": [] },
+					{
+						"id": 204,
+						"name": "Set TLM period time",
+						"params": [
+							{
+								"name": "tlm_type",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "the type of the telematry to update ",
+								"calibration": "cal12"
+							},
+							{
+								"name": "TLM interval",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "number of seconds between every TLM save"
+							}
+						]
+					},
+					{ "id": 205, "name": "Get TLM period times", "params": [] }
+				]
+			},
+			{
+				"id": 4,
+				"name": "Management",
+				"serviceSubTypes": [
+					{
+						"id": 221,
+						"name": "Update sat time",
+						"params": [
+							{
+								"name": "time",
+								"isLittleEndian": true,
+								"type": "datetime",
+								"description": "what time we want to set"
+							}
+						]
+					},
+					{
+						"id": 222,
+						"name": "Restert",
+						"params": [
+							{
+								"name": "reset type",
+								"isLittleEndian": true,
+								"type": "byte",
+								"description": "what type to reset do we want to preform",
+								"calibration": "cal13"
+							}
+						]
+					},
+					{
+						"id": 224,
+						"name": "FRAM Write",
+						"params": [
+							{
+								"name": "Byte data",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "addr(int)+data"
+							}
+						]
+					},
+					{
+						"id": 225,
+						"name": "FRAM Read",
+						"params": [
+							{
+								"name": "Byte data",
+								"isLittleEndian": true,
+								"type": "int32",
+								"description": "addr(int)+size of data to read(int)"
+							}
+						]
+					},
+					{ "id": 226, "name": "FRAM Resart", "params": [] },
+					{ "id": 227, "name": "Get Sat Uptime", "params": [] }
+				]
+			}
+		]
+	},
+	"calibrations": [
+		{
+			"name": "cal1",
+			"type": "enum",
+			"options": [
+				{ "name": "nominal", "value": 1 },
+				{ "name": "transponder", "value": 2 }
+			]
+		},
+		{
+			"name": "cal2",
+			"type": "enum",
+			"options": [
+				{ "name": 1200, "value": 0 },
+				{ "name": 2400, "value": 1 },
+				{ "name": 4800, "value": 2 },
+				{ "name": 9600, "value": 3 }
+			]
+		},
+		{
+			"name": "cal3",
+			"type": "enum",
+			"options": [
+				{ "name": "Side A", "value": 0 },
+				{ "name": "Side B", "value": 1 }
+			]
+		},
+		{
+			"name": "cal4",
+			"type": "enum",
+			"options": [
+				{ "name": "Side A", "value": 0 },
+				{ "name": "Side B", "value": 1 }
+			]
+		},
+		{
+			"name": "cal5",
+			"type": "enum",
+			"options": [
+				{ "name": "disarm", "value": 172 },
+				{ "name": "arm", "value": 173 }
+			]
+		},
+		{
+			"name": "cal6",
+			"type": "enum",
+			"options": [
+				{ "name": "Side A", "value": 0 },
+				{ "name": "Side B", "value": 1 }
+			]
+		},
+		{
+			"name": "cal7",
+			"type": "enum",
+			"options": [
+				{ "name": "Side A", "value": 0 },
+				{ "name": "Side B", "value": 1 }
+			]
+		},
+		{
+			"name": "cal8",
+			"type": "enum",
+			"options": [
+				{ "name": "Off", "value": 0 },
+				{ "name": "On", "value": 1 }
+			]
+		},
+		{
+			"name": "cal9",
+			"type": "enum",
+			"options": [
+				{ "name": "EPS", "value": 0 },
+				{ "name": "TX", "value": 1 },
+				{ "name": "ANT", "value": 2 },
+				{ "name": "Solar Panel", "value": 3 },
+				{ "name": "WOD", "value": 4 },
+				{ "name": "RX", "value": 6 },
+				{ "name": "LOG", "value": 13 }
+			]
+		},
+		{
+			"name": "cal10",
+			"type": "enum",
+			"options": [
+				{ "name": "EPS", "value": 0 },
+				{ "name": "TX", "value": 1 },
+				{ "name": "ANT", "value": 2 },
+				{ "name": "Solar Panel", "value": 3 },
+				{ "name": "WOD", "value": 4 },
+				{ "name": "RX", "value": 6 },
+				{ "name": "LOG", "value": 13 }
+			]
+		},
+		{
+			"name": "cal11",
+			"type": "enum",
+			"options": [
+				{ "name": "EPS", "value": 0 },
+				{ "name": "TX", "value": 1 },
+				{ "name": "ANT", "value": 2 },
+				{ "name": "WOD", "value": 4 },
+				{ "name": "RX", "value": 6 },
+				{ "name": "LOG", "value": 13 }
+			]
+		},
+		{
+			"name": "cal12",
+			"type": "enum",
+			"options": [
+				{ "name": "EPS", "value": 0 },
+				{ "name": "TX", "value": 1 },
+				{ "name": "ANT", "value": 2 },
+				{ "name": "Solar Panel", "value": 3 },
+				{ "name": "WOD", "value": 4 }
+			]
+		},
+		{
+			"name": "cal13",
+			"type": "enum",
+			"options": [
+				{ "name": "reset software", "value": 0 },
+				{ "name": "reset MCU using EPS", "value": 2 },
+				{ "name": "reset_trxvu_hard", "value": 3 },
+				{ "name": "reset_trxvu_soft", "value": 4 },
+				{ "name": "reset_ant_SideA", "value": 5 },
+				{ "name": "reset_ant_SideB", "value": 6 }
+			]
+		}
+	]
+}

@@ -1,0 +1,31 @@
+{
+	"name": "hwllo",
+	"id": 1,
+	"subTypes": [
+		{
+			"name": "hi",
+			"key": { "serviceType": 1, "serviceSubType": 4 },
+			"params": [
+				{
+					"name": "pppp",
+					"type": "int"
+				},
+				{
+					"name": "map",
+					"type": "bitmap",
+					"bitfields": [
+						{
+							"name": "f1",
+							"type": "int"
+						},
+						{
+							"name": "f2",
+							"type": "enum",
+							"values": ["yes", "no"]
+						}
+					]
+				}
+			]
+		}
+	]
+}

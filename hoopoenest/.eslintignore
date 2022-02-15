@@ -1,0 +1,6 @@
+jest.config.js
+.eslintrc.js
+node_modules
+dist
+coverage
+update-version.js

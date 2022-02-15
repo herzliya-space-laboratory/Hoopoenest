@@ -1,0 +1,5 @@
+{
+	"port": 5000,
+	"apiUrl": "http://localhost:2000",
+	"localNetApiUrl": "http://localhost:2000"
+}

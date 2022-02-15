@@ -1,0 +1,37 @@
+image: node:10.15.3
+
+clone:
+    depth: full
+
+pipelines:
+    branches:
+        master:
+            - step:
+                  name: "Build and Upload"
+                  caches:
+                      - node
+                  script:
+                      - npm i
+                      - node update-version.js
+                      - git add -A
+                      - git commit -m "[skip ci] update version"
+                      - git push
+                      - git checkout develop
+                      - git rebase master
+                      - git push
+                      - npm run release
+
+                      - npm run release
+
+                      - cd release
+                      - cp ../config.json .
+                      - cd ..
+                      - apt-get update
+                      - apt-get install zip -y
+                      - zip -r HoopoeNest.zip release
+
+                      - wget -O dbx https://github.com/dropbox/dbxcli/releases/download/v3.0.0/dbxcli-linux-amd64
+                      - chmod +x ./dbx
+                      - mkdir -p ~/.config/dbxcli/
+                      - cp dbxcli-auth.json ~/.config/dbxcli/auth.json
+                      - ./dbx put HoopoeNest.zip HoopoeNest/HoopoeNest.zip
